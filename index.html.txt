@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gramialclabe | Detalles personalizados</title>
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#ffe6f0;
+    color:#222;
+}
+
+header{
+    text-align:center;
+    padding:40px 20px;
+    background:linear-gradient(135deg,#ffd6ec,#c8f3f0);
+}
+
+header img{
+    max-width:220px;
+}
+
+h1{
+    margin:15px 0 5px;
+    font-size:32px;
+}
+
+.frase{
+    font-style:italic;
+    margin-bottom:10px;
+}
+
+.btn{
+    display:inline-block;
+    background:#7fd8d2;
+    padding:12px 25px;
+    margin:10px;
+    border-radius:30px;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.section{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.productos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+input, textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    margin-top:10px;
+    background:#ffb6d9;
+    border:none;
+    padding:10px;
+    border-radius:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo Gramialclabe">
+    <h1>Gramialclabe</h1>
+    <div class="frase">Detalles personalizados que guardan momentos para siempre</div>
+    <div class="frase">Creamos con amor lo que tu corazón quiere regalar</div>
+    <a href="#tienda" class="btn">Comprar ahora</a>
+    <a href="https://wa.me/56940810259" class="btn">Hablar por WhatsApp</a>
+</header>
+
+<section class="section" id="tienda">
+    <h2>Nuestros Productos</h2>
+    <p>Descuentos por cantidad disponibles</p>
+
+    <div class="productos">
+
+        <div class="card">
+            <h3>Agendas personalizadas</h3>
+            <p>Precio fijo</p>
+            <p><small>Tiempo de entrega mínimo 4 días – máximo 9 días</small></p>
+            <textarea placeholder="Describe tu personalización"></textarea>
+            <input placeholder="Tu WhatsApp">
+            <button onclick="enviarPedido('Agenda personalizada')">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>Calendarios imantados</h3>
+            <p>Precio fijo</p>
+            <p><small>Tiempo de entrega mínimo 4 días – máximo 9 días</small></p>
+            <textarea placeholder="Describe tu personalización"></textarea>
+            <input placeholder="Tu WhatsApp">
+            <button onclick="enviarPedido('Calendario imantado')">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>Stickers</h3>
+            <p>Precio fijo</p>
+            <p><small>Tiempo de entrega mínimo 4 días – máximo 9 días</small></p>
+            <textarea placeholder="Describe tu personalización"></textarea>
+            <input placeholder="Tu WhatsApp">
+            <button onclick="enviarPedido('Stickers')">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>Chapitas</h3>
+            <p>Llavero espejo • Llavero • Destapador • Alfiler • Imantada</p>
+            <p>Precio fijo</p>
+            <p><small>Tiempo de entrega mínimo 4 días – máximo 9 días</small></p>
+            <textarea placeholder="Describe tu personalización"></textarea>
+            <input placeholder="Tu WhatsApp">
+            <button onclick="enviarPedido('Chapitas')">Comprar</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <h2>¿Cómo funciona la compra?</h2>
+    <p>1. Elige tu producto</p>
+    <p>2. Escribe tu personalización</p>
+    <p>3. Deja tu WhatsApp</p>
+    <p>4. Te contactamos para confirmar</p>
+</section>
+
+<footer>
+    Síguenos en Instagram: Gramialclabe | Facebook: Gramialclabe Impresión
+</footer>
+
+<script>
+function enviarPedido(producto){
+    let mensaje = "Hola, quiero comprar: " + producto;
+    window.location.href = "https://wa.me/56940810259?text=" + encodeURIComponent(mensaje);
+}
+</script>
+
+</body>
+</html>
